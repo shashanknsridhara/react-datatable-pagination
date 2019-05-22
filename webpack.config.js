@@ -1,0 +1,53 @@
+var path = require('path');
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components|build)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      },
+        {
+          test: /\.css$/,
+          use: [
+            {
+              loader: "style-loader"
+            },
+            {
+              loader: "css-loader",
+              options: {
+                modules: false,
+                importLoaders: 1,
+                localIdentName: "[name]_[local]_[hash:base64]",
+                sourceMap: true,
+                minimize: true
+              }
+            }
+          ]
+        },
+        {
+          test: /\.(png|jpg|gif)$/,
+          loader: "url-loader"
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: "file-loader"
+        }
+    ]
+  },
+  externals: {
+    'react': 'commonjs react' 
+  }
+};

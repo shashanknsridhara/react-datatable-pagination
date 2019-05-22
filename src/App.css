@@ -1,0 +1,80 @@
+ content {
+  font-size: 15px;
+  text-align: left;
+  background-color: #f7f4f4;
+  width: 80%;
+  height: 50%;
+  border: 1px solid #b5b5b5;
+  overflow: hidden;
+  font-family: Calibri;
+  margin-top: 4%;
+}
+
+infoData{
+  width:50%;
+  display:inline-block;
+  float:left;
+}
+
+exportCSV{
+  width:30%;
+  float:right;
+  display:inline-block;
+}
+
+table{
+  border: 1px solid black;
+  width: 100%
+}
+th, td{
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+  li {
+    color: #fff;
+    display: flex;
+  }
+
+  ul li.page-item.active a.page-link {
+    color: #445565 !important;
+    background-color: #e3e7eb !important;
+    border-color: #ced4da !important;
+  }
+  ul a.page-link {
+    padding: 0.75rem 1rem;
+    min-width: 1.0rem;
+    text-align: center;
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+    color: #6b88a4;
+    font-weight: 900;
+    font-size: 1rem;
+  }
+  ul a.page-link:hover {
+    background-color: #f4f4f4;
+  }
+  li:first-child a {
+    border-radius: 5px 0 0 5px;
+  }
+  li:last-child a {
+    border-radius: 0 5px 0;
+    border-right: 2px solid gray;
+  }
+  a {
+    background-color: white;
+    padding: 5px 10px;
+    border: 2px solid gray;
+    border-right: 0;
+    text-decoration:none;
+  }
