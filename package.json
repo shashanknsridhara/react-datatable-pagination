@@ -1,8 +1,12 @@
 {
   "name": "react-datatable-pagination",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A ReactJS component to render a Data-table with Pagination.",
   "main": "build/index.js",
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/Shashank-95/react-datatable-pagination"
+  },
   "peerDependencies": {
     "react": "^16.4.0"
   },
