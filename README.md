@@ -68,7 +68,7 @@ Name | Type  | Description
 
 ## Contribute
 
-1. [Submit an issue]()
+1. [Submit an issue](https://github.com/Shashank-95/react-datatable-pagination/)
 2. Fork the repository
 3. Create a dedicated branch (never ever work in `master`)
 4. The first time, run command: `webpack` into the directory
