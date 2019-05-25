@@ -1,6 +1,6 @@
 {
   "name": "react-datatable-pagination",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A ReactJS component to render a Data-table with Pagination.",
   "main": "build/index.js",
   "repository":{
@@ -11,6 +11,7 @@
   "peerDependencies": {
     "react": "^16.4.0"
   },
+  
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack"

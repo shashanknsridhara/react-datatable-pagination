@@ -72,14 +72,15 @@ class DataTable extends Component{
         let headings = Object.keys(this.props.obj[0]);
          let data = currentResults.map((result, index) => {
               return( 
-                <tr>
-                  {headings.map(heading =>{
+                <tr key={index}>
+                  {headings.map((heading, ind) =>{
                 return (
                 
                     <td style={{
                                 width: "6%",
                                 fontSize: "14px",
                                 verticalAlign: "middle"}}
+                        key={ind}
                                 >
                             {result[heading]}
                     </td>        
@@ -120,16 +121,18 @@ class DataTable extends Component{
 
                     <div style={{width:"80%"}}>
                         <table>
+                        <tbody>
                         <tr>
-                            {headings.map(key =>{
+                            {headings.map((key, index) =>{
                                 return(
                                     <th
                                         style={{
                                         width: "6%",
                                         fontWeight: "bold",
                                         fontSize: "14px",
-                                        verticalAlign: "middle"
+                                        verticalAlign: "middle"                                       
                                     }}
+                                    key={index}
                                 >
                                     {key}
                                     </th>
@@ -139,6 +142,7 @@ class DataTable extends Component{
                             </tr>
 
                             {this.displayData()}
+                            </tbody>
                         </table>
                     </div>
          
